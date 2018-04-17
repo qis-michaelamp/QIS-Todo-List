@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "588524739454",
+    "firebase_url": "https://qis-to-do-list.firebaseio.com",
+    "project_id": "qis-to-do-list",
+    "storage_bucket": "qis-to-do-list.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:588524739454:android:43ad2b82778b89ab",
+        "android_client_info": {
+          "package_name": "com.example.lenovo.qis_todolist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "588524739454-2s31q4vdknm3712urnrbs2pulhseqjs9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lenovo.qis_todolist",
+            "certificate_hash": "ab70ad418ae219b4818a55c294eca1f915f7e161"
+          }
+        },
+        {
+          "client_id": "588524739454-mj5elodo24d30sdk5l0p9n6sbdbuf249.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCk_3qiCD2lIbUnzrAF82S6ZByYiovuVv0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "588524739454-mj5elodo24d30sdk5l0p9n6sbdbuf249.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
