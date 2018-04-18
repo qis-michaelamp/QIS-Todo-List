@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.example.lenovo.qis_todolist.MainActivity;
 import com.example.lenovo.qis_todolist.R;
+import com.example.lenovo.qis_todolist.activity.OnlineTaskActivity;
 import com.example.lenovo.qis_todolist.model.ToDo;
 
 import java.util.ArrayList;
@@ -47,16 +48,18 @@ class ListItemViewAdapter extends RecyclerView.ViewHolder implements View.OnClic
     public void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu
             .ContextMenuInfo contextMenuInfo) {
         contextMenu.setHeaderTitle("Options :");
-        contextMenu.add(0, 0, getAdapterPosition(), "Delete Task");
+        contextMenu.add(0, 0, getAdapterPosition(), "Delete");
     }
 }
 
 public class TodoAdapter extends RecyclerView.Adapter<ListItemViewAdapter>{
 
-    MainActivity mainActivity;
+    OnlineTaskActivity mainActivity;
     List<ToDo> toDoList = new ArrayList<>();
 
-    public TodoAdapter(MainActivity mainActivity, List<ToDo> toDoList) {
+    public TodoAdapter(OnlineTaskActivity mainActivity, List<ToDo> toDoList) {
+        this.mainActivity = mainActivity;
+        this.toDoList = toDoList;
     }
 
     @Override

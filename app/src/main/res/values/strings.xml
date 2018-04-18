@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">QIS-ToDo List</string>
+    <string name="app_name">QIS TODO</string>
     <string name="Material_Edit_Text_Title">Title</string>
     <string name="Material_Edit_Text_Description">Description</string>
 </resources>
