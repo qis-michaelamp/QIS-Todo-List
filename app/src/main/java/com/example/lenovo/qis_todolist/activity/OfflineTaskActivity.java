@@ -43,6 +43,7 @@ public class OfflineTaskActivity extends AppCompatActivity {
         if(mAdapter == null) {
             mAdapter = new ArrayAdapter<String>(this, R.layout.custom_offline_task_item, R.id
                     .task_title, taskList);
+            mAdapter.notifyDataSetChanged();
             listView.setAdapter(mAdapter);
         }
         else {
