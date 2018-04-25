@@ -16,12 +16,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.OfflineTaskActivity"
+        <activity
+            android:name=".activity.OfflineTaskActivity"
             android:label="Personal TODO List"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".activity.OnlineTaskActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".activity.OnlineTaskActivity"
             android:label="Business TODO List"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".activity.PersonalTodoActivity"
+            android:label="Personal TODO List"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".activity.CreateTaskActivity"
+            android:label="Create New Task"
+            android:parentActivityName=".activity.PersonalTodoActivity" />
+        <activity
+            android:name=".activity.ReadTaskActivity"
+            android:label="Read Task"
+            android:parentActivityName=".activity.PersonalTodoActivity" />
+        <activity
+            android:name=".activity.UpdateTaskActivity"
+            android:label="Update Task"
+            android:parentActivityName=".activity.PersonalTodoActivity" />
     </application>
 
 </manifest>

@@ -9,10 +9,11 @@ import android.widget.Button;
 
 import com.example.lenovo.qis_todolist.activity.OfflineTaskActivity;
 import com.example.lenovo.qis_todolist.activity.OnlineTaskActivity;
+import com.example.lenovo.qis_todolist.activity.PersonalTodoActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn_offline, btn_online;
+    Button btn_offline, btn_online, btn_test;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         btn_offline = (Button) findViewById(R.id.btn_offline);
         btn_online = (Button) findViewById(R.id.btn_online);
+        btn_test = (Button) findViewById(R.id.btn_test);
 
         btn_offline.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,6 +35,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, OnlineTaskActivity.class));
+            }
+        });
+
+        btn_test.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, PersonalTodoActivity.class));
             }
         });
     }
