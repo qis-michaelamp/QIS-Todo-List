@@ -40,6 +40,9 @@
             android:name=".activity.UpdateTaskActivity"
             android:label="Update Task"
             android:parentActivityName=".activity.PersonalTodoActivity" />
+        <activity android:name=".activity.TestActivity" />
+        <activity android:name=".activity.AddEditTaskActivity" />
+        <activity android:name=".activity.ListDataActivity"></activity>
     </application>
 
 </manifest>
