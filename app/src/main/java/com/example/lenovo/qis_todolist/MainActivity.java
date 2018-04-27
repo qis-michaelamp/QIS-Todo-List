@@ -15,7 +15,7 @@ import com.example.lenovo.qis_todolist.activity.TestActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn_offline, btn_online, btn_test;
+    Button btn_offline, btn_online, btn_test, btn_test_2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         btn_offline = (Button) findViewById(R.id.btn_offline);
         btn_online = (Button) findViewById(R.id.btn_online);
         btn_test = (Button) findViewById(R.id.btn_test);
+        btn_test_2 = (Button) findViewById(R.id.btn_test_2);
 
         btn_offline.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,9 +44,17 @@ public class MainActivity extends AppCompatActivity {
         btn_test.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, PersonalTodoActivity.class));
+            }
+        });
+
+        btn_test_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, ListDataActivity.class));
             }
         });
+
     }
 
     @Override

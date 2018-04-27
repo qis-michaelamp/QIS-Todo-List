@@ -31,4 +31,12 @@
         android:gravity="center"
         android:text="Test TODO" />
 
+    <Button
+        android:id="@+id/btn_test_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Test 2 TODO" />
+
 </LinearLayout>

@@ -8,4 +8,6 @@
     <string name="input2">Input</string>
     <string name="submit">Submit</string>
     <string name="Material_Edit_Text_Priority">Priority</string>
+    <string name="new_task">New Task</string>
+    <string name="edit_task">Edit Task</string>
 </resources>
