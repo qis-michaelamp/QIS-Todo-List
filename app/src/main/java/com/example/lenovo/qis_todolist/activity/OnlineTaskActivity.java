@@ -10,7 +10,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.lenovo.qis_todolist.MainActivity;
 import com.example.lenovo.qis_todolist.R;
 import com.example.lenovo.qis_todolist.adapter.TodoAdapter;
 import com.example.lenovo.qis_todolist.model.ToDo;
@@ -48,7 +47,6 @@ public class OnlineTaskActivity extends AppCompatActivity {
     public String idUpdate = "";
 
     TodoAdapter adapter;
-
     SpotsDialog dialog;
 
     @Override

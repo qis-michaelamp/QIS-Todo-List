@@ -10,4 +10,11 @@
     <string name="Material_Edit_Text_Priority">Priority</string>
     <string name="new_task">New Task</string>
     <string name="edit_task">Edit Task</string>
+
+    <array name="priority">
+        <item>Not Set</item>
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </array>
 </resources>

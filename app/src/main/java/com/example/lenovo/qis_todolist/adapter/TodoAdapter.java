@@ -7,14 +7,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.lenovo.qis_todolist.MainActivity;
 import com.example.lenovo.qis_todolist.R;
 import com.example.lenovo.qis_todolist.activity.OnlineTaskActivity;
 import com.example.lenovo.qis_todolist.model.ToDo;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.zip.Inflater;
 
 /**
  * Created by Lenovo on 4/17/2018.

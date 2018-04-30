@@ -6,33 +6,34 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
-    <com.rengwuxian.materialedittext.MaterialEditText
-        android:visibility="gone"
-        android:id="@+id/id_new_task"
+    <!--<com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/id_edit_task"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/id"
         android:layout_below="@+id/id"
         android:inputType="number"
         app:met_errorColor="@color/colorLightRed">
+
+        <requestFocus />
     </com.rengwuxian.materialedittext.MaterialEditText>
 
     <TextView
-        android:visibility="gone"
         android:id="@+id/id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:text="Task Id" />
+        android:text="Task Id" />-->
 
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/id_new_task"
-        android:layout_below="@+id/id_new_task"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_marginTop="10dp"
         android:text="@string/Material_Edit_Text_Title" />
 
@@ -44,9 +45,7 @@
         android:layout_below="@id/title"
         android:inputType="text"
         android:maxLength="20"
-        app:met_errorColor="@color/colorLightRed">
-        <requestFocus />
-    </com.rengwuxian.materialedittext.MaterialEditText>
+        app:met_errorColor="@color/colorLightRed" />
 
     <TextView
         android:id="@+id/description"
@@ -76,34 +75,42 @@
         android:layout_marginTop="10dp"
         android:text="@string/Material_Edit_Text_Priority" />
 
-    <com.rengwuxian.materialedittext.MaterialEditText
-        android:id="@+id/priority_new_task"
+    <Spinner
+        android:id="@+id/priority_new_spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@id/priority"
         android:layout_below="@id/priority"
-        android:hint="Low / Medium / High"
-        android:inputType="text"
-        app:met_errorColor="@color/colorLightRed" />
+        android:layout_marginTop="10dp"
+        android:entries="@array/priority" />
 
-    <Button
-        android:id="@+id/button_cancel_new_task"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/priority_new_task"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignLeft="@id/priority_new_spinner"
         android:layout_alignParentBottom="true"
-        android:drawableLeft="@drawable/ic_left_arrow"
-        android:text="Cancel" />
+        android:layout_below="@id/priority_new_spinner"
+        android:gravity="bottom"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/button_save_new_task"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@id/priority_new_task"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/priority_new_task"
-        android:drawableLeft="@drawable/ic_checlk"
-        android:text="Save" />
+        <Button
+
+            android:id="@+id/btn_cancel_new_task"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_left_arrow"
+            android:text="Cancel" />
+
+        <Button
+            android:id="@+id/btn_save_new_task"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_checlk"
+            android:text="Create Task" />
+
+    </LinearLayout>
 </RelativeLayout>

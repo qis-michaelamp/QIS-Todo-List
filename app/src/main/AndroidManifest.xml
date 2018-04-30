@@ -20,29 +20,13 @@
             android:name=".activity.OfflineTaskActivity"
             android:label="Personal TODO List"
             android:parentActivityName=".MainActivity" />
+        <activity android:name=".activity.OfflineCreateTaskActivity"
+            android:label="Create task"
+            android:parentActivityName=".activity.OfflineTaskActivity"/>
         <activity
             android:name=".activity.OnlineTaskActivity"
             android:label="Business TODO List"
             android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".activity.PersonalTodoActivity"
-            android:label="Personal TODO List"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".activity.CreateTaskActivity"
-            android:label="Create New Task"
-            android:parentActivityName=".activity.PersonalTodoActivity" />
-        <activity
-            android:name=".activity.ReadTaskActivity"
-            android:label="Read Task"
-            android:parentActivityName=".activity.PersonalTodoActivity" />
-        <activity
-            android:name=".activity.UpdateTaskActivity"
-            android:label="Update Task"
-            android:parentActivityName=".activity.PersonalTodoActivity" />
-        <activity android:name=".activity.TestActivity" />
-        <activity android:name=".activity.AddEditTaskActivity" />
-        <activity android:name=".activity.ListDataActivity" />
     </application>
 
 </manifest>

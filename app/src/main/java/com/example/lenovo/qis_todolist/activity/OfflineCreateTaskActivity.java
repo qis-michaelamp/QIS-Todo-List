@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Spinner;
@@ -16,7 +17,7 @@ import com.rengwuxian.materialedittext.MaterialEditText;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class TestActivity extends AppCompatActivity{
+public class OfflineCreateTaskActivity extends AppCompatActivity{
 
     public static final String DATABASE_NAME = "todoOfflineDb";
 
@@ -48,8 +49,7 @@ public class TestActivity extends AppCompatActivity{
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(TestActivity.this, ListDataActivity.class);
-                startActivity(intent);
+                onBackPressed();
             }
         });
 
@@ -62,11 +62,11 @@ public class TestActivity extends AppCompatActivity{
     private void createTodoTable() {
         db.execSQL(
                 "CREATE TABLE IF NOT EXISTS myTodo (\n"
-                    + " id INTEGER NOT NULL CONSTRAINT todo_pk PRIMARY KEY AUTOINCREMENT, \n"
-                    + " title VARCHAR(200) NOT NULL, \n"
-                    + " description VARCHAR(200) NOT NULL, \n"
-                    + " priority VARCHAR(200) NOT NULL, \n"
-                    + " joiningdate DATETIME NOT NULL);"
+                        + " id INTEGER NOT NULL CONSTRAINT todo_pk PRIMARY KEY AUTOINCREMENT, \n"
+                        + " title VARCHAR(200) NOT NULL, \n"
+                        + " description VARCHAR(200) NOT NULL, \n"
+                        + " priority VARCHAR(200) NOT NULL, \n"
+                        + " joiningdate DATETIME NOT NULL);"
         );
     }
 
@@ -75,7 +75,8 @@ public class TestActivity extends AppCompatActivity{
             createTitle.setError("Please input title of your task");
             createTitle.requestFocus();
             return false;
-        } else if (description.isEmpty()) {
+        }
+        if (description.isEmpty()) {
             createDescription.setError("Please input description of your task");
             createDescription.requestFocus();
             return false;
@@ -99,6 +100,15 @@ public class TestActivity extends AppCompatActivity{
                     + "(?, ?, ?, ?);";
             db.execSQL(insertTask, new String[]{title, description, priority, joiningdate});
             Toast.makeText(this, "Create task success !", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(OfflineCreateTaskActivity.this, OfflineTaskActivity.class));
         }
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home :
+                onBackPressed();
+                return true;
+        } return super.onOptionsItemSelected(item);
     }
 }
