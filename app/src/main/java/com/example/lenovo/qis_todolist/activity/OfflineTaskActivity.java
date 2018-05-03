@@ -32,7 +32,7 @@ public class OfflineTaskActivity extends AppCompatActivity {
 
         todoModelList = new ArrayList<>();
 
-        db = openOrCreateDatabase(TestActivity.DATABASE_NAME, MODE_PRIVATE, null);
+        db = openOrCreateDatabase(OfflineCreateTaskActivity.DATABASE_NAME, MODE_PRIVATE, null);
 
         showTask();
     }
