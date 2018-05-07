@@ -51,7 +51,7 @@ public class OfflineTaskActivity extends AppCompatActivity {
                 break;
             case android.R.id.home :
                 onBackPressed();
-                break;
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }

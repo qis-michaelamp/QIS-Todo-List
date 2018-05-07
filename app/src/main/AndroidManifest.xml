@@ -20,9 +20,10 @@
             android:name=".activity.OfflineTaskActivity"
             android:label="Personal TODO List"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".activity.OfflineCreateTaskActivity"
+        <activity
+            android:name=".activity.OfflineCreateTaskActivity"
             android:label="Create task"
-            android:parentActivityName=".activity.OfflineTaskActivity"/>
+            android:parentActivityName=".activity.OfflineTaskActivity" />
         <activity
             android:name=".activity.OnlineTaskActivity"
             android:label="Business TODO List"
