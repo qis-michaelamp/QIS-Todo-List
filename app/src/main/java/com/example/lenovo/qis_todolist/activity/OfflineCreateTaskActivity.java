@@ -11,7 +11,6 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.lenovo.qis_todolist.R;
-import com.example.lenovo.qis_todolist.javaclass.TestHelper;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
 import java.text.SimpleDateFormat;
@@ -21,7 +20,6 @@ public class OfflineCreateTaskActivity extends AppCompatActivity{
 
     public static final String DATABASE_NAME = "todoOfflineDb";
 
-    TestHelper helper;
     Button btnAdd, btnCancel;
     MaterialEditText createTitle, createDescription;
     Spinner createPriority;
@@ -31,8 +29,6 @@ public class OfflineCreateTaskActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
-
-        helper = new TestHelper(this);
 
         btnAdd = (Button) findViewById(R.id.btn_save_new_task);
         btnCancel = (Button) findViewById(R.id.btn_cancel_new_task);

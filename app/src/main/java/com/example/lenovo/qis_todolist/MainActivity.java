@@ -9,7 +9,6 @@ import android.widget.Button;
 
 import com.example.lenovo.qis_todolist.activity.OfflineTaskActivity;
 import com.example.lenovo.qis_todolist.activity.OnlineTaskActivity;
-import com.thekhaeng.pushdownanim.PushDown;
 import com.thekhaeng.pushdownanim.PushDownAnim;
 
 public class MainActivity extends AppCompatActivity {
@@ -48,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        /*super.onBackPressed();*/
         Process.killProcess(Process.myPid());
         System.exit(1);
     }
